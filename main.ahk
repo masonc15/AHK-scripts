@@ -1,4 +1,4 @@
-; Global ================================================================================
+﻿; Global ================================================================================
 #SingleInstance, Force ; Allow only one running instance of script
 #Persistent ; Keep script permanently running until terminated
 #NoEnv ; Avoid checking empty variables to see if they are environment variables
@@ -17,6 +17,7 @@ Alt & WheelDown::Volume_Down
 Alt & MButton::Volume_Mute
 
 ; Using the hotstring ":X", this prints the date and time that a task was completed.
+DateTitle:
 :?*:`:X::
 FormatTime, CurrentDateTime,, M-d-yy h:mm tt
 SendInput, {Space}- %CurrentDateTime%
@@ -88,3 +89,13 @@ return
 
 ; resets IfWinActive to false
 #IfWinActive
+
+
+; sends now task in daily note to done section with timestamp, and returns cursor to top of note
+; NOTE: only works if no whitespace at end of file
+!+q::
+KeyWait, LAlt
+Send, {LControl Down}{x}{End}{LControl Up}{Enter}{LControl Down}{v}{LControl Up}{Backspace}
+Gosub, DateTitle
+Send, {LControl Down}{g}{LControl Up}{7}{Enter}
+return
