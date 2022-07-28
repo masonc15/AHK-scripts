@@ -1,4 +1,4 @@
-﻿; Global ================================================================================
+; Global ================================================================================
 #SingleInstance, Force ; Allow only one running instance of script
 #Persistent ; Keep script permanently running until terminated
 #NoEnv ; Avoid checking empty variables to see if they are environment variables
@@ -28,8 +28,8 @@ FormatTime, CurrentDateTime,, h:mm tt
 SendInput, %CurrentDateTime%
 return
 
-; ":D" will print just the current date.
-:?*:`:D::
+; ";date" will print just the current date.
+:?*:;date::
 FormatTime, CurrentDateTime,, M-d-yy
 SendInput, %CurrentDateTime%
 return
