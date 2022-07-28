@@ -85,3 +85,6 @@ return
 ^4::Send, {#}{#}{#}{#}{Space}
 ^5::Send, {#}{#}{#}{#}{#}{Space}
 ^6::Send, {#}{#}{#}{#}{#}{#}{Space}
+
+; resets IfWinActive to false
+#IfWinActive
