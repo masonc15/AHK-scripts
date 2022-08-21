@@ -8,7 +8,7 @@ SendMode, Input ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir, %A_ScriptDir% ; Change the working directory of the script
 SetBatchLines, -1 ; Run script at maximum speed
 
-#Include C:\Users\darks\Dropbox\Journal\Notebook\tf.ahk
+#Include tf.ahk
 ; ================================================================================
 
 ;Volume control, Alt+Scroll wheel (and Mbutton)
